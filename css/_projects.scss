@@ -1,0 +1,114 @@
+
+@use 'vars' as v;
+
+//$col-red: #d94442;
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  
+  list-style-type: none;
+
+  li {
+    flex-grow: 1;
+    transition: 250ms;
+
+    &:hover {
+      flex-grow: 3;
+    }
+
+    div {
+      width: 100%;
+      min-height: 60vh;
+    }
+
+
+    &#proj-css-creature {
+      // background: v.$col-orange;
+      // background: turquoise;
+      background-image: url('../assets/project-css-creature2.png');
+      background-repeat: no-repeat;
+    }
+    &#proj-static-layout {
+      // background: v.$col-green;
+      background-image: url('../assets/project-static-layout.png');
+      background-repeat: no-repeat;
+    }
+    &#proj-api-demo {
+      background: v.$col-purple;
+    }
+    &#proj-blue-badge {
+      background: v.$col-blue;
+    }
+    &#proj-red-badge {
+      background: v.$col-red;
+    }
+    
+  }
+}
+
+
+// HOVER.CSS FORWARD EFFECT
+
+.hvr-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+
+// HOVER.CSS RIPPLE OUT EFFECT
+
+
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: #444 solid 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
