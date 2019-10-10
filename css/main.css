@@ -8,38 +8,45 @@ nav {
   background: url("../assets/sammy-and-shannon.jpg");
   height: 80rem;
 }
-ul {
+section#contact-me ul {
+  display: block;
+}
+section#contact-me ul li {
+  display: block;
+}
+
+section#projects ul {
   display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-ul li {
+section#projects ul li {
   flex-grow: 1;
-  transition: 250ms;
+  transition: flex-grow 750ms cubic-bezier(0, 0, 0, 1.1);
 }
-ul li:hover {
+section#projects ul li:hover {
   flex-grow: 3;
 }
-ul li div {
+section#projects ul li div {
   width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
 }
-ul li#proj-css-creature {
+section#projects ul li#proj-css-creature {
   background-image: url("../assets/project-css-creature2.png");
   background-repeat: no-repeat;
 }
-ul li#proj-static-layout {
+section#projects ul li#proj-static-layout {
   background-image: url("../assets/project-static-layout.png");
   background-repeat: no-repeat;
 }
-ul li#proj-api-demo {
+section#projects ul li#proj-api-demo {
   background: #8311ec;
 }
-ul li#proj-blue-badge {
+section#projects ul li#proj-blue-badge {
   background: #3356ff;
 }
-ul li#proj-red-badge {
+section#projects ul li#proj-red-badge {
   background: #d94442;
 }
 
@@ -115,7 +122,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Serif Pro", serif;
   letter-spacing: 2rem;
-  transition: 250ms;
+  transition: letter-spacing 750ms cubic-bezier(0, 0, 0, 1.1);
 }
 
 h1 {

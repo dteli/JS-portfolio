@@ -24,7 +24,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Serif Pro", serif;
   letter-spacing: 2rem;
-  transition: 250ms;
+  transition: letter-spacing 750ms cubic-bezier(0, 0, 0, 1.1);
+
 }
 
 h1 {
