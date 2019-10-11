@@ -2,12 +2,19 @@
 
 section#contact-me {
 
+  font-size: 2rem;
+  
   dl {
+    font-size: 3.2rem;
+    dt {
+      font-size: 3.2rem;
+    }
 
   }
 
   ul {
-
+    text-align: right;
+    font-size: 3.2rem;
     display: block;
 
     li {

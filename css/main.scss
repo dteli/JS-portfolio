@@ -36,6 +36,11 @@ h2 {
   font-size: 6rem;
 }
 
+h3 {
+  font-size: 4rem;
+  letter-spacing: 1.4rem;
+}
+
 p {
   font-size: 2rem;
   color: v.$col-black;
@@ -49,7 +54,7 @@ dl {
 section {
   margin: 2rem 0;
 
-  h2 {
+  h2, h3 {
     margin: 2rem;
   }
 
